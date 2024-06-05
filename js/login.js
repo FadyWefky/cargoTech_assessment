@@ -24,7 +24,6 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             },
         });
 
-
         const data = await response.json();
 
         loginButton.classList.remove('is-loading');
@@ -33,10 +32,12 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             message.className = 'has-text-success';
             message.textContent = 'Login successful! Redirecting...';
 
+            localStorage.setItem('loginResponse', JSON.stringify(data));
+
             setTimeout(() => {
-                localStorage.setItem('loginResponse', JSON.stringify(data));
                 window.location.href = 'dashboard.html';
             }, 1000);
+          
         } else {
             message.className = 'has-text-danger';
             message.textContent = data.message || 'Login failed!';
@@ -46,5 +47,5 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         loginButton.classList.remove('is-loading');
         message.className = 'has-text-danger';
         message.textContent = 'An error occurred. Please try again.';
-      }
+    }
 });

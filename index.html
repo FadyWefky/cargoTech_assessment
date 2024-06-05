@@ -1,20 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" class="data-theme">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
     <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    
     <!-- Navbar -->
-    <nav class="navbar is-fixed-top ">
-        <div class="navbar-brand">
-            <a class="navbar-item has-text-warning" href="#">
-                Cargo Tech
-            </a>
+    <nav class="navbar is-fixed-top has-background-black">
+        <div class="navbar-brand ">
+          <button class="navbar-item has-text-warning animated-element" href="#">
+            CargoTech
+          </button>
+          <button class="button navbar-burger" id="toggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-    </nav>
+      
+        <div class="navbar-menu is-justify-content-center" id="navMenu">
+          <div class="navbar has-background-black">
+            <div class="navbar-item">
+                <div class="navbar has-background-black">
+                    <button class="navbar-item has-text-light mr-4 has-text-weight-semibold transition-element" href="#">Home</button>
+                    <button class="navbar-item has-text-light mr-4 has-text-weight-semibold transition-element" href="#">About</button>
+                    <button class="navbar-item has-text-light mr-4 has-text-weight-semibold transition-element" href="#">Contact</button>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
 
     <!-- Sidebar -->
    
@@ -46,10 +67,7 @@
 
 
 
-                            <div class="box">
-
-
-                        
+                            <div class="box has-background-info-soft">                        
                                 <div class="column mb-6">
                                     <h1 class="title has-text-warning">Sign in</h1>
                                 </div>
@@ -93,6 +111,10 @@
     </div>
 
     <!-- JavaScript for handling login -->
-    <script src="js/login.js"></script>
+    <script src="js/login.js">
+         
+    </script>
+
+    
 </body>
 </html>

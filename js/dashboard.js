@@ -16,3 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
         confirmModal.classList.remove('is-active');
     });
 });
+  
+
+
+const loginResponse = JSON.parse(localStorage.getItem('loginResponse'));
+
+    // Access data as strings
+    const userData = loginResponse.data;
+    const userName = loginResponse.user.user_name;
+    const userPhone = loginResponse.user.user_phone;
+    const userEmail = loginResponse.user.user_email;
+
+    // Display data in HTML
+    document.getElementById('userName').textContent = `Welcome, ${userName}!`;
+    document.getElementById('userPhone').textContent = `Phone : ${userPhone}`;
+    document.getElementById('userEmail').textContent = `Email : ${userEmail}`;

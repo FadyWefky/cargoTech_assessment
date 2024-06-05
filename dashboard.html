@@ -1,25 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" class="data-theme >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/bulma.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar is-fixed-top">
-        <div class="navbar-brand">
-            <a class="navbar-item has-text-warning" href="/index.html">
-                Cargo Tech
-            </a>
+    <nav class="navbar is-fixed-top has-background-black">
+        <div class="navbar-brand ">
+          <button class="navbar-item has-text-warning animated-element" href="#">
+            CargoTech
+          </button>
+          <button class="button navbar-burger" id="toggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
-        
-    </nav>
+      
+        <div class="navbar-menu is-justify-content-center" id="navMenu">
+          <div class="navbar has-background-black">
+            <div class="navbar-item">
+                <div class="navbar has-background-black">
+                    <button class="navbar-item has-text-light mr-4 has-text-weight-semibold transition-element" href="#">Home</button>
+                    <button class="navbar-item has-text-light mr-4 has-text-weight-semibold transition-element" href="#">About</button>
+                    <button class="navbar-item has-text-light mr-4 has-text-weight-semibold transition-element" href="#">Contact</button>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </nav>
 
       <!-- Sidebar -->
    
-<button class="mt-6 button is-hidden-desktop is-block-mobile" data-target="#collapse-section">Show</button>
+
 
 <div id="collapse-section" class="is-hidden-mobile">
 
@@ -37,11 +55,17 @@
 
 
         <!-- Main Content -->
-        <div class="column is-centered is-6 container">
+        <div class="column is-centered is-6 container ">
             <section class="section ">
                 <div class="container">
-                    <h1 class="title mt-3 has-text-black">Dashboard</h1>
-                    <div class="box has-text-light" id="responseData">Profile</div>
+                    <h1 class="title mt-3 has-text-warning">Dashboard</h1>
+
+                    <div class="box has-text-light  has-background-info-soft" id="responseData">
+                    <p class="has-text-warning has-text-weight-bold mt-2"  id="userName"></p>
+                    <p class="animated-element has-text-light has-text-weight-bold mt-6"  id="userPhone"></p>
+                    <p  class="animated-element has-text-light has-text-weight-bold mt-6" id="userEmail"></p>
+                    </div>
+
                     <button class="button is-success" id="editButton">Edit</button>
                 </div>
             </section>
@@ -60,13 +84,15 @@
                 <p>Are you sure?</p>
             </section>
             <footer class="modal-card-foot">
-                <button class="button is-danger">Confirm</button>
-                <button class="button" id="cancelModal">Cancel</button>
+                <button class="button is-success mr-2">Confirm</button>
+                <button class="button is-light" id="cancelModal">Cancel</button>
             </footer>
         </div>
     </div>
 
     <!-- JavaScript for handling dashboard -->
-    <script src="js/dashboard.js"></script>
+    <script src="js/dashboard.js">
+   
+    </script>
 </body>
 </html>
