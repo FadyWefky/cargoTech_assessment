@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/bulma.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar is-fixed-top">
+        <div class="navbar-brand">
+            <a class="navbar-item has-text-warning" href="/index.html">
+                Cargo Tech
+            </a>
+        </div>
+        
+    </nav>
+
+      <!-- Sidebar -->
+   
+<button class="mt-6 button is-hidden-desktop is-block-mobile" data-target="#collapse-section">Show</button>
+
+<div id="collapse-section" class="is-hidden-mobile">
+
+    <div class="sidebar is-fixed has-text-centered">
+        <div class="sidebar-background has-background-black"></div>
+        <ul class="">
+            <li><a href="#" class="has-text-info">Profile</a></li>
+            <li><a href="#" class="has-text-info ">Products</a></li>
+          <li><a href="#" class="has-text-info ">Customers</a></li>
+          <li><a href="#" class="has-text-info ">Store</a></li>
+          <li><a href="#" class="has-text-info ">Settings</a></li>
+        </ul>
+      </div>
+</div>
+
+
+        <!-- Main Content -->
+        <div class="column is-centered is-6 container">
+            <section class="section ">
+                <div class="container">
+                    <h1 class="title mt-3 has-text-black">Dashboard</h1>
+                    <div class="box has-text-light" id="responseData">Profile</div>
+                    <button class="button is-success" id="editButton">Edit</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="confirmModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Confirmation</p>
+                <button class="delete" aria-label="close" id="closeModal"></button>
+            </header>
+            <section class="modal-card-body">
+                <p>Are you sure?</p>
+            </section>
+            <footer class="modal-card-foot">
+                <button class="button is-danger">Confirm</button>
+                <button class="button" id="cancelModal">Cancel</button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- JavaScript for handling dashboard -->
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
