@@ -49,3 +49,17 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
         message.textContent = 'An error occurred. Please try again.';
     }
 });
+
+// show password handler
+const passwordInput = document.getElementById('password');
+const showPasswordButton = document.getElementById('showPasswordButton');
+
+showPasswordButton.addEventListener('click', () => {
+  if (passwordInput.type === 'password') {
+    passwordInput.type = 'text';
+    showPasswordButton.textContent = 'Hide Password';
+  } else {
+    passwordInput.type = 'password';
+    showPasswordButton.textContent = 'Show Password';
+  }
+});
